@@ -1,0 +1,130 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 480104 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=23528, tid=0x0000000000002344
+#
+# JRE version:  (8.0_202-b08) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.202-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000000752800):  JavaThread "Unknown thread" [_thread_in_vm, id=9028, stack(0x00000000024a0000,0x00000000025a0000)]
+
+Stack: [0x00000000024a0000,0x00000000025a0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000000752800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9028, stack(0x00000000024a0000,0x00000000025a0000)]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000006c2400000, size: 4060 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff716a00000 - 0x00007ff716a35000 	C:\Program Files\Amazon Corretto\jdk1.8.0_202\jre\bin\java.exe
+0x00007ffcd1e80000 - 0x00007ffcd205b000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffcd1b20000 - 0x00007ffcd1bce000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffccefc0000 - 0x00007ffccf20a000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffcd1c70000 - 0x00007ffcd1d11000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffcd0090000 - 0x00007ffcd012d000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffccf970000 - 0x00007ffccf9c9000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffcd1850000 - 0x00007ffcd1975000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffcd1d30000 - 0x00007ffcd1e7a000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffcce470000 - 0x00007ffcce48e000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffccfe80000 - 0x00007ffccfea7000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffccee30000 - 0x00007ffccefb8000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffccec90000 - 0x00007ffcced2a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffcceb90000 - 0x00007ffccec86000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffcbf6c0000 - 0x00007ffcbf927000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.15063.1155_none_40c7922129a7722b\COMCTL32.dll
+0x00007ffccfa80000 - 0x00007ffccfd79000 	C:\WINDOWS\System32\combase.dll
+0x00007ffcce3a0000 - 0x00007ffcce40a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffccfd80000 - 0x00007ffccfdad000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000000a10000 - 0x0000000000a21000 	C:\WINDOWS\System32\umppc8702.dll
+0x0000000068400000 - 0x00000000684d2000 	C:\Program Files\Amazon Corretto\jdk1.8.0_202\jre\bin\msvcr100.dll
+0x00000000684e0000 - 0x0000000068d27000 	C:\Program Files\Amazon Corretto\jdk1.8.0_202\jre\bin\server\jvm.dll
+0x00007ffccf9d0000 - 0x00007ffccf9d8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffcb8b20000 - 0x00007ffcb8b29000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffccfdb0000 - 0x00007ffccfe1c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffcc7d10000 - 0x00007ffcc7d33000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffccaa30000 - 0x00007ffccaa3a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffcc7c80000 - 0x00007ffcc7cab000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffcced30000 - 0x00007ffcced79000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffcbdd20000 - 0x00007ffcbdd2f000 	C:\Program Files\Amazon Corretto\jdk1.8.0_202\jre\bin\verify.dll
+0x00007ffcb1d60000 - 0x00007ffcb1d89000 	C:\Program Files\Amazon Corretto\jdk1.8.0_202\jre\bin\java.dll
+0x00007ffcbae50000 - 0x00007ffcbae66000 	C:\Program Files\Amazon Corretto\jdk1.8.0_202\jre\bin\zip.dll
+
+VM Arguments:
+java_command: C:\Users\212616565\Documents\NetBeansProjects\APIKarate-master\target\surefire\surefirebooter4547429730135642816.jar C:\Users\212616565\Documents\NetBeansProjects\APIKarate-master\target\surefire\surefire5823285777521366378tmp C:\Users\212616565\Documents\NetBeansProjects\APIKarate-master\target\surefire\surefire2971408863312219544tmp
+java_class_path (initial): C:\Users\212616565\Documents\NetBeansProjects\APIKarate-master\target\surefire\surefirebooter4547429730135642816.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Amazon Corretto\jdk1.8.0_202
+PATH=C:\Program Files\Amazon Corretto\jdk1.8.0_202\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Program Files\Cloud Foundry;C:\Program Files\cURL\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\PuTTY\;C:\Program Files\Amazon\AWSCLI\;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files (x86)\HPE\Unified Functional Testing\bin;C:\Users\212616565\AppData\Local\Microsoft\WindowsApps;C:\Users\212616565\AppData\Local\GitHubDesktop\bin;C:\dev-tools\maven\apache-maven-3.5.0\bin;C:\Docker_Toolbox;C:\Users\212616565\AppData\Roaming\npm;C:\Users\212616565\AppData\Local\Yarn\.bin;C:\Users\212616565\AppData\Local\Microsoft\WindowsApps;C:\Users\212616565\.dotnet\tools;C:\Users\212616565\AppData\Local\Box\Box Edit\
+USERNAME=212616565
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 15063 (10.0.15063.1058)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16625624k(3440264k free), swap 20818904k(5492k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.202-b08) for windows-amd64 JRE (1.8.0_202-b08), built on Jan 23 2019 22:53:35 by "Administrator" with MS VC++ 10.0 (VS2010)
+
+time: Sat Apr 13 08:54:09 2019
+timezone: Central Daylight Time
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
